@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>news</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let item of news" lines="none">
+    <ion-card href={{item.url}} class="ion-activated">
+
+      <ion-card-header>
+        <img src={{item.image}} />
+
+        <ion-card-subtitle>{{item.year}}</ion-card-subtitle>
+        <ion-card-title>{{item.title}}
+        <ion-icon name={{item.icon}}></ion-icon>
+        </ion-card-title>
+
+      </ion-card-header>
+      <ion-card-content>
+
+        {{item.description}}
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
